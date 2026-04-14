@@ -1,4 +1,11 @@
-# judge which cmake codes to use 
+# judge which cmake codes to use
+if(NOT ROS_EDITION)
+  set(ROS_EDITION "ROS2" CACHE STRING "ROS edition: ROS1 or ROS2" FORCE)
+endif()
+if(NOT DISTRO_ROS)
+  set(DISTRO_ROS "humble" CACHE STRING "ROS2 distro (humble, jazzy)" FORCE)
+endif()
+
 if(ROS_EDITION STREQUAL "ROS1")
 
   # Copyright(c) 2019 livoxtech limited.
